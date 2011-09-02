@@ -38,7 +38,7 @@ if {{ not defined IW_MKF_IWCRT}}
 deployments
 {
     #iphone-link-opts="-framework X" #Use this to bring in any additional link options needed
-    iphone-link-libs="/FlurryLib/libFlurry"
+    iphone-link-libs="Flurry/libFlurry"
     iphone-link-libs=s3eFlurry
     iphone-link-libdirs=lib/iphone
 
