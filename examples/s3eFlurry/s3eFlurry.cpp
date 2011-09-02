@@ -276,7 +276,7 @@ bool ExampleUpdate()
 		}
 		else
 		{
-			AppendMessageColour(GREEN, "Session report send on pause: Enabled");
+			AppendMessageColour(GREEN, "Session report send on pause: Disabled");
 			g_ButtonToggleSendOnPause->m_Name = (char*)"Enable send session report on pause";
 		}
     }
