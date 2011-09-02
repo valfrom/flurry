@@ -1,0 +1,11 @@
+#!/usr/bin/env mkb
+files
+{
+    s3eFlurry.cpp
+}
+
+subprojects
+{
+    ExamplesMain
+    s3eFlurry
+}

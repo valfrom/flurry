@@ -1,0 +1,631 @@
+Archive member included because of file (symbol)
+
+C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                              release\s3eFlurry_platform.os (s3eEdkThreadRunOnOS)
+
+Discarded input sections
+
+ .group         0x00000000       0x10 release\s3eFlurry_platform.os
+ .group         0x00000000       0x10 release\s3eFlurry_platform.os
+ .group         0x00000000       0x10 release\s3eFlurry_platform.os
+ .text          0x00000000        0x0 release\s3eFlurry_platform.os
+ .data          0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._Z27s3eFlurryTerminate_platformv
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._Z22s3eFlurryInit_platformv
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._ZL27s3eEdkAndroidFindClass_realPKc
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._Z41s3eFlurrySetSessionReportOnPause_platformh
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._Z41s3eFlurrySetSessionReportOnClose_platformh
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._Z29s3eFlurrySetLocation_platformP11s3eLocation
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._Z31s3eFlurrySetUserGender_platform19s3eFlurryUserGender
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._Z28s3eFlurrySetUserAge_platformh
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._Z27s3eFlurrySetUserID_platformPKc
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._Z26s3eFlurryLogError_platformPKcS0_
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._Z31s3eFlurryEndTimedEvent_platformPKc
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._Z26s3eFlurryLogEvent_platformPKch
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .ARM.extab.text._Z23s3eFlurryStart_platformPKc
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .note.GNU-stack
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .text          0x00000000        0x0 release\s3eFlurry.os
+ .data          0x00000000        0x0 release\s3eFlurry.os
+ .bss           0x00000000        0x0 release\s3eFlurry.os
+ .note.GNU-stack
+                0x00000000        0x0 release\s3eFlurry.os
+ .text          0x00000000        0x0 release\s3eFlurry_platform_1.os
+ .data          0x00000000        0x0 release\s3eFlurry_platform_1.os
+ .bss           0x00000000        0x0 release\s3eFlurry_platform_1.os
+ .note.GNU-stack
+                0x00000000        0x0 release\s3eFlurry_platform_1.os
+ .text          0x00000000        0x0 release\s3eFlurry_register.os
+ .data          0x00000000        0x0 release\s3eFlurry_register.os
+ .bss           0x00000000        0x0 release\s3eFlurry_register.os
+ .text._Z20s3eFlurryRegisterExtv
+                0x00000000       0xf0 release\s3eFlurry_register.os
+ .ARM.extab.text._Z20s3eFlurryRegisterExtv
+                0x00000000        0x0 release\s3eFlurry_register.os
+ .ARM.exidx.text._Z20s3eFlurryRegisterExtv
+                0x00000000        0x8 release\s3eFlurry_register.os
+ .ARM.extab.text.RegisterExt
+                0x00000000        0x0 release\s3eFlurry_register.os
+ .note.GNU-stack
+                0x00000000        0x0 release\s3eFlurry_register.os
+ .text          0x00000000        0x0 C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .data          0x00000000        0x0 C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .bss           0x00000000        0x0 C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .text.s3eEdkThreadRunOnOSAsync
+                0x00000000       0x30 C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .ARM.extab.text.s3eEdkThreadRunOnOSAsync
+                0x00000000        0xc C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .ARM.exidx.text.s3eEdkThreadRunOnOSAsync
+                0x00000000        0x8 C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .text.s3eEdkErrorSetString
+                0x00000000       0x30 C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .ARM.extab.text.s3eEdkErrorSetString
+                0x00000000        0xc C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .ARM.exidx.text.s3eEdkErrorSetString
+                0x00000000        0x8 C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .note.GNU-stack
+                0x00000000        0x0 C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD release\s3eFlurry_platform.os
+LOAD release\s3eFlurry.os
+LOAD release\s3eFlurry_platform_1.os
+LOAD release\s3eFlurry_register.os
+LOAD C:\dev\sdk\main\s3e\edk\lib\android\libedk.a
+LOAD C:\dev\sdk\main\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
+LOAD C:\dev\sdk\main\platform_libs\android\arch-arm\usr\lib/libc.so
+LOAD C:\dev\sdk\main\platform_libs\android\arch-arm\usr\lib/libm.so
+LOAD C:\dev\sdk\main\platform_libs\android\arch-arm\usr\lib/liblog.so
+LOAD C:\dev\sdk\main\platform_libs\android\arch-arm\usr\lib/libstdc++.so
+                0x000000d4                . = (0x0 + SIZEOF_HEADERS)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash           0x000000d4       0xa0
+ *(.hash)
+ .hash          0x000000d4       0xa0 release\s3eFlurry_platform.os
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x00000174      0x150
+ *(.dynsym)
+ .dynsym        0x00000174      0x150 release\s3eFlurry_platform.os
+
+.dynstr         0x000002c4      0x140
+ *(.dynstr)
+ .dynstr        0x000002c4      0x140 release\s3eFlurry_platform.os
+
+.gnu.version    0x00000404        0x0
+ *(.gnu.version)
+ .gnu.version   0x00000000        0x0 release\s3eFlurry_platform.os
+
+.gnu.version_d  0x00000404        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x00000000        0x0 release\s3eFlurry_platform.os
+
+.gnu.version_r  0x00000404        0x0
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x00000000        0x0 release\s3eFlurry_platform.os
+
+.rel.dyn        0x00000404      0x158
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ .rel.text._Z22s3eFlurryInit_platformv
+                0x00000404       0xa0 release\s3eFlurry_platform.os
+ .rel.text._Z41s3eFlurrySetSessionReportOnPause_platformh
+                0x000004a4        0x8 release\s3eFlurry_platform.os
+ .rel.text._Z41s3eFlurrySetSessionReportOnClose_platformh
+                0x000004ac        0x8 release\s3eFlurry_platform.os
+ .rel.text._Z29s3eFlurrySetLocation_platformP11s3eLocation
+                0x000004b4        0x8 release\s3eFlurry_platform.os
+ .rel.text._Z31s3eFlurrySetUserGender_platform19s3eFlurryUserGender
+                0x000004bc        0x8 release\s3eFlurry_platform.os
+ .rel.text._Z28s3eFlurrySetUserAge_platformh
+                0x000004c4        0x8 release\s3eFlurry_platform.os
+ .rel.text._Z27s3eFlurrySetUserID_platformPKc
+                0x000004cc        0x8 release\s3eFlurry_platform.os
+ .rel.text._Z26s3eFlurryLogError_platformPKcS0_
+                0x000004d4        0x8 release\s3eFlurry_platform.os
+ .rel.text._Z31s3eFlurryEndTimedEvent_platformPKc
+                0x000004dc        0x8 release\s3eFlurry_platform.os
+ .rel.text._Z26s3eFlurryLogEvent_platformPKch
+                0x000004e4        0x8 release\s3eFlurry_platform.os
+ .rel.text._Z23s3eFlurryStart_platformPKc
+                0x000004ec        0x8 release\s3eFlurry_platform.os
+ .rel.text._Z20s3eFlurryRegisterExtv
+                0x00000000        0x0 release\s3eFlurry_platform.os
+ .rel.text.RegisterExt
+                0x000004f4       0x68 release\s3eFlurry_platform.os
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x00000000        0x0 release\s3eFlurry_platform.os
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rel.ifunc)
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rela.ifunc)
+
+.rel.plt        0x0000055c       0x18
+ *(.rel.plt)
+ .rel.plt       0x0000055c       0x18 release\s3eFlurry_platform.os
+ *(.rel.iplt)
+
+.rela.plt
+ *(.rela.plt)
+ *(.rela.iplt)
+
+.init
+ *(.init)
+
+.plt            0x00000574       0x38
+ *(.plt)
+ .plt           0x00000574       0x38 release\s3eFlurry_platform.os
+ *(.iplt)
+
+.text           0x000005ac      0xa14
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text._ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_
+                0x000005ac       0x1c release\s3eFlurry_platform.os
+                0x000005ac                _JNIEnv::GetMethodID(_jclass*, char const*, char const*)
+ .text._Z27s3eFlurryTerminate_platformv
+                0x000005c8        0x4 release\s3eFlurry_platform.os
+                0x000005c8                s3eFlurryTerminate_platform()
+ .text._ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
+                0x000005cc       0x38 release\s3eFlurry_platform.os
+                0x000005cc                _JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
+ .text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+                0x00000604       0x38 release\s3eFlurry_platform.os
+                0x00000604                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
+ .text._Z22s3eFlurryInit_platformv
+                0x0000063c      0x2f4 release\s3eFlurry_platform.os
+                0x0000063c                s3eFlurryInit_platform()
+ .text._ZL27s3eEdkAndroidFindClass_realPKc
+                0x00000930       0x5c release\s3eFlurry_platform.os
+ .text._Z41s3eFlurrySetSessionReportOnPause_platformh
+                0x0000098c       0x54 release\s3eFlurry_platform.os
+                0x0000098c                s3eFlurrySetSessionReportOnPause_platform(unsigned char)
+ .text._Z41s3eFlurrySetSessionReportOnClose_platformh
+                0x000009e0       0x54 release\s3eFlurry_platform.os
+                0x000009e0                s3eFlurrySetSessionReportOnClose_platform(unsigned char)
+ .text._Z29s3eFlurrySetLocation_platformP11s3eLocation
+                0x00000a34       0x54 release\s3eFlurry_platform.os
+                0x00000a34                s3eFlurrySetLocation_platform(s3eLocation*)
+ .text._Z31s3eFlurrySetUserGender_platform19s3eFlurryUserGender
+                0x00000a88       0x88 release\s3eFlurry_platform.os
+                0x00000a88                s3eFlurrySetUserGender_platform(s3eFlurryUserGender)
+ .text._Z28s3eFlurrySetUserAge_platformh
+                0x00000b10       0x54 release\s3eFlurry_platform.os
+                0x00000b10                s3eFlurrySetUserAge_platform(unsigned char)
+ .text._Z27s3eFlurrySetUserID_platformPKc
+                0x00000b64       0x78 release\s3eFlurry_platform.os
+                0x00000b64                s3eFlurrySetUserID_platform(char const*)
+ .text._Z26s3eFlurryLogError_platformPKcS0_
+                0x00000bdc       0x9c release\s3eFlurry_platform.os
+                0x00000bdc                s3eFlurryLogError_platform(char const*, char const*)
+ .text._Z31s3eFlurryEndTimedEvent_platformPKc
+                0x00000c78       0x78 release\s3eFlurry_platform.os
+                0x00000c78                s3eFlurryEndTimedEvent_platform(char const*)
+ .text._Z26s3eFlurryLogEvent_platformPKch
+                0x00000cf0       0x78 release\s3eFlurry_platform.os
+                0x00000cf0                s3eFlurryLogEvent_platform(char const*, unsigned char)
+ .text._Z23s3eFlurryStart_platformPKc
+                0x00000d68       0x78 release\s3eFlurry_platform.os
+                0x00000d68                s3eFlurryStart_platform(char const*)
+ .text.s3eFlurrySetSessionReportOnPause
+                0x00000de0       0x10 release\s3eFlurry.os
+                0x00000de0                s3eFlurrySetSessionReportOnPause
+ .text.s3eFlurrySetSessionReportOnClose
+                0x00000df0       0x10 release\s3eFlurry.os
+                0x00000df0                s3eFlurrySetSessionReportOnClose
+ .text.s3eFlurrySetLocation
+                0x00000e00       0x10 release\s3eFlurry.os
+                0x00000e00                s3eFlurrySetLocation
+ .text.s3eFlurrySetUserGender
+                0x00000e10       0x10 release\s3eFlurry.os
+                0x00000e10                s3eFlurrySetUserGender
+ .text.s3eFlurrySetUserAge
+                0x00000e20       0x10 release\s3eFlurry.os
+                0x00000e20                s3eFlurrySetUserAge
+ .text.s3eFlurrySetUserID
+                0x00000e30       0x10 release\s3eFlurry.os
+                0x00000e30                s3eFlurrySetUserID
+ .text.s3eFlurryLogError
+                0x00000e40       0x10 release\s3eFlurry.os
+                0x00000e40                s3eFlurryLogError
+ .text.s3eFlurryEndTimedEvent
+                0x00000e50       0x10 release\s3eFlurry.os
+                0x00000e50                s3eFlurryEndTimedEvent
+ .text.s3eFlurryLogEvent
+                0x00000e60       0x10 release\s3eFlurry.os
+                0x00000e60                s3eFlurryLogEvent
+ .text.s3eFlurryStart
+                0x00000e70       0x10 release\s3eFlurry.os
+                0x00000e70                s3eFlurryStart
+ .text._Z18s3eFlurryTerminatev
+                0x00000e80       0x10 release\s3eFlurry.os
+                0x00000e80                s3eFlurryTerminate()
+ .text._Z13s3eFlurryInitv
+                0x00000e90       0x10 release\s3eFlurry.os
+                0x00000e90                s3eFlurryInit()
+ .text.RegisterExt
+                0x00000ea0       0xf0 release\s3eFlurry_register.os
+                0x00000ea0                RegisterExt
+ .text.s3eEdkThreadRunOnOS
+                0x00000f90       0x30 C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000f90                s3eEdkThreadRunOnOS
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+ *(.v4_bx)
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.fini
+ *(.fini)
+                0x00000fc0                PROVIDE (__etext, .)
+                0x00000fc0                PROVIDE (_etext, .)
+                0x00000fc0                PROVIDE (etext, .)
+
+.rodata         0x00000fc0      0x170
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x00000fc0      0x170 release\s3eFlurry_platform.os
+ .rodata.str1.4
+                0x00000000        0xc release\s3eFlurry_register.os
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x00001130       0xc0
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab.text._ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_
+                0x00001130        0xc release\s3eFlurry_platform.os
+ .ARM.extab.text._ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
+                0x0000113c        0xc release\s3eFlurry_platform.os
+ .ARM.extab.text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+                0x00001148        0xc release\s3eFlurry_platform.os
+ .ARM.extab.text.s3eFlurrySetSessionReportOnPause
+                0x00001154        0xc release\s3eFlurry.os
+ .ARM.extab.text.s3eFlurrySetSessionReportOnClose
+                0x00001160        0xc release\s3eFlurry.os
+ .ARM.extab.text.s3eFlurrySetLocation
+                0x0000116c        0xc release\s3eFlurry.os
+ .ARM.extab.text.s3eFlurrySetUserGender
+                0x00001178        0xc release\s3eFlurry.os
+ .ARM.extab.text.s3eFlurrySetUserAge
+                0x00001184        0xc release\s3eFlurry.os
+ .ARM.extab.text.s3eFlurrySetUserID
+                0x00001190        0xc release\s3eFlurry.os
+ .ARM.extab.text.s3eFlurryLogError
+                0x0000119c        0xc release\s3eFlurry.os
+ .ARM.extab.text.s3eFlurryEndTimedEvent
+                0x000011a8        0xc release\s3eFlurry.os
+ .ARM.extab.text.s3eFlurryLogEvent
+                0x000011b4        0xc release\s3eFlurry.os
+ .ARM.extab.text.s3eFlurryStart
+                0x000011c0        0xc release\s3eFlurry.os
+ .ARM.extab.text._Z18s3eFlurryTerminatev
+                0x000011cc        0xc release\s3eFlurry.os
+ .ARM.extab.text._Z13s3eFlurryInitv
+                0x000011d8        0xc release\s3eFlurry.os
+ .ARM.extab.text.s3eEdkThreadRunOnOS
+                0x000011e4        0xc C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x000011f0                PROVIDE (__exidx_start, .)
+
+.ARM.exidx      0x000011f0       0xd8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx.text._ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_
+                0x000011f0        0x8 release\s3eFlurry_platform.os
+ .ARM.exidx.text._Z27s3eFlurryTerminate_platformv
+                0x000011f8        0x8 release\s3eFlurry_platform.os
+ .ARM.exidx.text._ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
+                0x00001200        0x8 release\s3eFlurry_platform.os
+ .ARM.exidx.text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+                0x00001208        0x8 release\s3eFlurry_platform.os
+ .ARM.exidx.text._Z22s3eFlurryInit_platformv
+                0x00001210        0x8 release\s3eFlurry_platform.os
+ .ARM.exidx.text._ZL27s3eEdkAndroidFindClass_realPKc
+                0x00001218        0x8 release\s3eFlurry_platform.os
+ .ARM.exidx.text._Z41s3eFlurrySetSessionReportOnPause_platformh
+                0x00001220        0x8 release\s3eFlurry_platform.os
+ .ARM.exidx.text._Z41s3eFlurrySetSessionReportOnClose_platformh
+                0x00001228        0x0 release\s3eFlurry_platform.os
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z29s3eFlurrySetLocation_platformP11s3eLocation
+                0x00001228        0x0 release\s3eFlurry_platform.os
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z31s3eFlurrySetUserGender_platform19s3eFlurryUserGender
+                0x00001228        0x8 release\s3eFlurry_platform.os
+ .ARM.exidx.text._Z28s3eFlurrySetUserAge_platformh
+                0x00001230        0x8 release\s3eFlurry_platform.os
+ .ARM.exidx.text._Z27s3eFlurrySetUserID_platformPKc
+                0x00001238        0x8 release\s3eFlurry_platform.os
+ .ARM.exidx.text._Z26s3eFlurryLogError_platformPKcS0_
+                0x00001240        0x8 release\s3eFlurry_platform.os
+ .ARM.exidx.text._Z31s3eFlurryEndTimedEvent_platformPKc
+                0x00001248        0x8 release\s3eFlurry_platform.os
+ .ARM.exidx.text._Z26s3eFlurryLogEvent_platformPKch
+                0x00001250        0x0 release\s3eFlurry_platform.os
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z23s3eFlurryStart_platformPKc
+                0x00001250        0x0 release\s3eFlurry_platform.os
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.s3eFlurrySetSessionReportOnPause
+                0x00001250        0x8 release\s3eFlurry.os
+ .ARM.exidx.text.s3eFlurrySetSessionReportOnClose
+                0x00001258        0x8 release\s3eFlurry.os
+ .ARM.exidx.text.s3eFlurrySetLocation
+                0x00001260        0x8 release\s3eFlurry.os
+ .ARM.exidx.text.s3eFlurrySetUserGender
+                0x00001268        0x8 release\s3eFlurry.os
+ .ARM.exidx.text.s3eFlurrySetUserAge
+                0x00001270        0x8 release\s3eFlurry.os
+ .ARM.exidx.text.s3eFlurrySetUserID
+                0x00001278        0x8 release\s3eFlurry.os
+ .ARM.exidx.text.s3eFlurryLogError
+                0x00001280        0x8 release\s3eFlurry.os
+ .ARM.exidx.text.s3eFlurryEndTimedEvent
+                0x00001288        0x8 release\s3eFlurry.os
+ .ARM.exidx.text.s3eFlurryLogEvent
+                0x00001290        0x8 release\s3eFlurry.os
+ .ARM.exidx.text.s3eFlurryStart
+                0x00001298        0x8 release\s3eFlurry.os
+ .ARM.exidx.text._Z18s3eFlurryTerminatev
+                0x000012a0        0x8 release\s3eFlurry.os
+ .ARM.exidx.text._Z13s3eFlurryInitv
+                0x000012a8        0x8 release\s3eFlurry.os
+ .ARM.exidx.text.RegisterExt
+                0x000012b0        0x8 release\s3eFlurry_register.os
+ .ARM.exidx.text.s3eEdkThreadRunOnOS
+                0x000012b8       0x10 C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                                  0x8 (size before relaxing)
+                0x000012c8                PROVIDE (__exidx_end, .)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x000012c8                . = (ALIGN (0x8000) - ((0x8000 - .) & 0x7fff))
+                0x000092c8                . = (0x8000 DATA_SEGMENT_ALIGN 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array
+ *(SORT(.init_array.*))
+ *(.init_array)
+
+.fini_array
+ *(SORT(.fini_array.*))
+ *(.fini_array)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x000092c8       0xb0
+ *(.dynamic)
+ .dynamic       0x000092c8       0xb0 release\s3eFlurry_platform.os
+                0x000092c8                _DYNAMIC
+                0x00009378                . = (. DATA_SEGMENT_RELRO_END 0x0)
+
+.got            0x00009378       0x18
+ *(.got.plt)
+ .got.plt       0x00009378       0x18 release\s3eFlurry_platform.os
+                0x00009378                _GLOBAL_OFFSET_TABLE_
+ *(.igot.plt)
+ *(.got)
+ .got           0x00000000        0x0 release\s3eFlurry_platform.os
+ *(.igot)
+
+.data           0x00009390        0x0
+                0x00009390                __data_start = .
+ *(.data .data.* .gnu.linkonce.d.*)
+
+.data1
+ *(.data1)
+                0x00009390                _edata = .
+                0x00009390                PROVIDE (edata, .)
+                0x00009390                __bss_start = .
+                0x00009390                __bss_start__ = .
+
+.bss            0x00009390       0x2c
+ *(.dynbss)
+ .dynbss        0x00000000        0x0 release\s3eFlurry_platform.os
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00009390       0x2c release\s3eFlurry_platform.os
+ *(COMMON)
+                0x000093bc                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x000093bc                _bss_end__ = .
+                0x000093bc                __bss_end__ = .
+                0x000093bc                . = ALIGN (0x4)
+                0x000093bc                . = ALIGN (0x4)
+                0x000093bc                __end__ = .
+                0x000093bc                _end = .
+                0x000093bc                PROVIDE (end, .)
+                0x000093bc                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.ARM.attributes
+                0x00000000       0x2c
+ .ARM.attributes
+                0x00000000       0x2c release\s3eFlurry_platform.os
+ .ARM.attributes
+                0x0000002c       0x2c release\s3eFlurry.os
+ .ARM.attributes
+                0x00000058       0x2c release\s3eFlurry_platform_1.os
+ .ARM.attributes
+                0x00000084       0x2c release\s3eFlurry_register.os
+ .ARM.attributes
+                0x000000b0       0x2c C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+
+.comment        0x00000000       0xd7
+ *(.comment)
+ .comment       0x00000000       0x2b release\s3eFlurry_platform.os
+ .comment       0x0000002b       0x2b release\s3eFlurry.os
+ .comment       0x00000056       0x2b release\s3eFlurry_platform_1.os
+ .comment       0x00000081       0x2b release\s3eFlurry_register.os
+ .comment       0x000000ac       0x2b C:\dev\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+OUTPUT(C:\dev\sdk\main\extensions\s3eFlurry\lib\android\libs3eFlurry.so elf32-littlearm)
