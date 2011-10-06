@@ -177,6 +177,33 @@ void s3eFlurrySetSessionReportOnClose(const s3eBool sendReportOnClose);
  */
 void s3eFlurrySetSessionReportOnPause(const s3eBool sendReportOnPause);
 
+/**
+ * Enable/Disable Flurry App Circle
+ * Should be done before s3eFlurryStart
+ * @see s3eFlurryStart
+ *
+ * @par Required Header Files
+ * s3eFlurry.h
+ */
+void s3eFlurryAppCircleEnable();
+
+/**
+ * Set the default message that will appear if no ad banner is displayed
+ *
+ * @par Required Header Files
+ * s3eFlurry.h
+ */
+void s3eFlurrySetDefaultText(const char* text);
+
+/**
+ * Show/Hide Flurry App Circle Banner Ads
+ * First call (true) shows banner, all subsequent calls update this banner
+ *
+ * @par Required Header Files
+ * s3eFlurry.h
+ */
+void s3eFlurryShowAdBanner(const s3eBool show);
+
 S3E_END_C_DECL
 
 #endif /* !S3E_EXT_FLURRY_H */

@@ -19,7 +19,10 @@ extern s3eResult s3eFlurryInit();
 extern void s3eFlurryTerminate();
 
 
-#if defined I3D_OS_IPHONE || defined I3D_OS_OSX
+// On platforms that use a seperate UI/OS thread we can autowrap functions
+// here.   Note that we can't use the S3E_USE_OS_THREAD define since this
+// code is oftern build standalone, outside the main loader build.
+#if defined I3D_OS_IPHONE || defined I3D_OS_OSX || defined I3D_OS_LINUX || defined I3D_OS_WINDOWS
 
 static void s3eFlurryStart_wrap(const char* ID)
 {
@@ -81,6 +84,24 @@ static void s3eFlurrySetSessionReportOnPause_wrap(const s3eBool sendReportOnPaus
     s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eFlurrySetSessionReportOnPause, 1, sendReportOnPause);
 }
 
+static void s3eFlurryAppCircleEnable_wrap()
+{
+    IwTrace(FLURRY_VERBOSE, ("calling s3eFlurry func on main thread: s3eFlurryAppCircleEnable"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eFlurryAppCircleEnable, 0);
+}
+
+static void s3eFlurrySetDefaultText_wrap(const char* text)
+{
+    IwTrace(FLURRY_VERBOSE, ("calling s3eFlurry func on main thread: s3eFlurrySetDefaultText"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eFlurrySetDefaultText, 1, text);
+}
+
+static void s3eFlurryShowAdBanner_wrap(const s3eBool show)
+{
+    IwTrace(FLURRY_VERBOSE, ("calling s3eFlurry func on main thread: s3eFlurryShowAdBanner"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eFlurryShowAdBanner, 1, show);
+}
+
 #define s3eFlurryStart s3eFlurryStart_wrap
 #define s3eFlurryLogEvent s3eFlurryLogEvent_wrap
 #define s3eFlurryEndTimedEvent s3eFlurryEndTimedEvent_wrap
@@ -91,13 +112,16 @@ static void s3eFlurrySetSessionReportOnPause_wrap(const s3eBool sendReportOnPaus
 #define s3eFlurrySetLocation s3eFlurrySetLocation_wrap
 #define s3eFlurrySetSessionReportOnClose s3eFlurrySetSessionReportOnClose_wrap
 #define s3eFlurrySetSessionReportOnPause s3eFlurrySetSessionReportOnPause_wrap
+#define s3eFlurryAppCircleEnable s3eFlurryAppCircleEnable_wrap
+#define s3eFlurrySetDefaultText s3eFlurrySetDefaultText_wrap
+#define s3eFlurryShowAdBanner s3eFlurryShowAdBanner_wrap
 
-#endif /* I3D_OS_IPHONE */
+#endif
 
 void s3eFlurryRegisterExt()
 {
     /* fill in the function pointer struct for this extension */
-    void* funcPtrs[10];
+    void* funcPtrs[13];
     funcPtrs[0] = (void*)s3eFlurryStart;
     funcPtrs[1] = (void*)s3eFlurryLogEvent;
     funcPtrs[2] = (void*)s3eFlurryEndTimedEvent;
@@ -108,11 +132,14 @@ void s3eFlurryRegisterExt()
     funcPtrs[7] = (void*)s3eFlurrySetLocation;
     funcPtrs[8] = (void*)s3eFlurrySetSessionReportOnClose;
     funcPtrs[9] = (void*)s3eFlurrySetSessionReportOnPause;
+    funcPtrs[10] = (void*)s3eFlurryAppCircleEnable;
+    funcPtrs[11] = (void*)s3eFlurrySetDefaultText;
+    funcPtrs[12] = (void*)s3eFlurryShowAdBanner;
 
     /*
      * Flags that specify the extension's use of locking and stackswitching
      */
-    int flags[10] = { 0 };
+    int flags[13] = { 0 };
 
     /*
      * Register the extension

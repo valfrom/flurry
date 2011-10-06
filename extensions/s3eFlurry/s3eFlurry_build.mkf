@@ -70,7 +70,7 @@ if {{defined I3D_OS_OSX}}
     }
 }
 
-if {{defined I3D_OS_LINUX}}
+if {{defined I3D_OS_LINUX and not defined S3E_ANDROID}}
 {
     files
     {

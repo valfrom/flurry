@@ -5,7 +5,7 @@ platform LINUX
 buildtype (SCONS, ARM)
 
 define S3E_ANDROID
-	
+
 options
 {
     dll

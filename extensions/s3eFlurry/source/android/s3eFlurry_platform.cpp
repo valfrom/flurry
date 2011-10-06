@@ -24,6 +24,9 @@ static jmethodID g_s3eFlurrySetUserGender;
 static jmethodID g_s3eFlurrySetLocation;
 static jmethodID g_s3eFlurrySetSessionReportOnClose;
 static jmethodID g_s3eFlurrySetSessionReportOnPause;
+static jmethodID g_s3eFlurryAppCircleEnable;
+static jmethodID g_s3eFlurrySetDefaultText;
+static jmethodID g_s3eFlurryShowAdBanner;
 
 s3eResult s3eFlurryInit_platform()
 {
@@ -86,6 +89,18 @@ s3eResult s3eFlurryInit_platform()
 
     g_s3eFlurrySetSessionReportOnPause = env->GetMethodID(cls, "s3eFlurrySetSessionReportOnPause", "()V");
     if (!g_s3eFlurrySetSessionReportOnPause)
+        goto fail;
+
+    g_s3eFlurryAppCircleEnable = env->GetMethodID(cls, "s3eFlurryAppCircleEnable", "()V");
+    if (!g_s3eFlurryAppCircleEnable)
+        goto fail;
+
+    g_s3eFlurrySetDefaultText = env->GetMethodID(cls, "s3eFlurrySetDefaultText", "(Ljava/lang/String;)V");
+    if (!g_s3eFlurrySetDefaultText)
+        goto fail;
+
+    g_s3eFlurryShowAdBanner = env->GetMethodID(cls, "s3eFlurryShowAdBanner", "(Z)V");
+    if (!g_s3eFlurryShowAdBanner)
         goto fail;
 
 
@@ -183,4 +198,26 @@ void s3eFlurrySetSessionReportOnPause_platform(const s3eBool sendReportOnPause)
 {
     JNIEnv* env = s3eEdkJNIGetEnv();
     env->CallVoidMethod(g_Obj, g_s3eFlurrySetSessionReportOnPause);
+}
+
+void s3eFlurryAppCircleEnable_platform()
+{
+    JNIEnv* env = s3eEdkJNIGetEnv();
+    env->CallVoidMethod(g_Obj, g_s3eFlurryAppCircleEnable);
+}
+
+void s3eFlurrySetDefaultText_platform(const char* text)
+{
+    JNIEnv* env = s3eEdkJNIGetEnv();
+    jstring text_jstr = env->NewStringUTF(text);
+    env->CallVoidMethod(g_Obj, g_s3eFlurrySetDefaultText, text_jstr);
+}
+
+void s3eFlurryShowAdBanner_platform(const s3eBool show)
+{
+    JNIEnv* env = s3eEdkJNIGetEnv();
+	if(show == S3E_TRUE)
+		env->CallVoidMethod(g_Obj, g_s3eFlurryShowAdBanner, true);
+	if(show == S3E_FALSE)
+		env->CallVoidMethod(g_Obj, g_s3eFlurryShowAdBanner, false);
 }

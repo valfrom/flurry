@@ -21,6 +21,9 @@ typedef       void(*s3eFlurrySetUserGender_t)(const s3eFlurryUserGender gender);
 typedef       void(*s3eFlurrySetLocation_t)(s3eLocation* location);
 typedef       void(*s3eFlurrySetSessionReportOnClose_t)(const s3eBool sendReportOnClose);
 typedef       void(*s3eFlurrySetSessionReportOnPause_t)(const s3eBool sendReportOnPause);
+typedef       void(*s3eFlurryAppCircleEnable_t)();
+typedef       void(*s3eFlurrySetDefaultText_t)(const char* text);
+typedef       void(*s3eFlurryShowAdBanner_t)(const s3eBool show);
 
 /**
  * struct that gets filled in by s3eFlurryRegister
@@ -37,6 +40,9 @@ typedef struct s3eFlurryFuncs
     s3eFlurrySetLocation_t m_s3eFlurrySetLocation;
     s3eFlurrySetSessionReportOnClose_t m_s3eFlurrySetSessionReportOnClose;
     s3eFlurrySetSessionReportOnPause_t m_s3eFlurrySetSessionReportOnPause;
+    s3eFlurryAppCircleEnable_t m_s3eFlurryAppCircleEnable;
+    s3eFlurrySetDefaultText_t m_s3eFlurrySetDefaultText;
+    s3eFlurryShowAdBanner_t m_s3eFlurryShowAdBanner;
 } s3eFlurryFuncs;
 
 static s3eFlurryFuncs g_Ext;
@@ -179,4 +185,34 @@ void s3eFlurrySetSessionReportOnPause(const s3eBool sendReportOnPause)
         return;
 
     g_Ext.m_s3eFlurrySetSessionReportOnPause(sendReportOnPause);
+}
+
+void s3eFlurryAppCircleEnable()
+{
+    IwTrace(FLURRY_VERBOSE, ("calling s3eFlurry[10] func: s3eFlurryAppCircleEnable"));
+
+    if (!_extLoad())
+        return;
+
+    g_Ext.m_s3eFlurryAppCircleEnable();
+}
+
+void s3eFlurrySetDefaultText(const char* text)
+{
+    IwTrace(FLURRY_VERBOSE, ("calling s3eFlurry[11] func: s3eFlurrySetDefaultText"));
+
+    if (!_extLoad())
+        return;
+
+    g_Ext.m_s3eFlurrySetDefaultText(text);
+}
+
+void s3eFlurryShowAdBanner(const s3eBool show)
+{
+    IwTrace(FLURRY_VERBOSE, ("calling s3eFlurry[12] func: s3eFlurryShowAdBanner"));
+
+    if (!_extLoad())
+        return;
+
+    g_Ext.m_s3eFlurryShowAdBanner(show);
 }

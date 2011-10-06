@@ -72,3 +72,18 @@ void s3eFlurrySetSessionReportOnPause(const s3eBool sendReportOnPause)
 {
 	s3eFlurrySetSessionReportOnPause_platform(sendReportOnPause);
 }
+
+void s3eFlurryAppCircleEnable()
+{
+	s3eFlurryAppCircleEnable_platform();
+}
+
+void s3eFlurrySetDefaultText(const char* text)
+{
+	s3eFlurrySetDefaultText_platform(text);
+}
+
+void s3eFlurryShowAdBanner(const s3eBool show)
+{
+	s3eFlurryShowAdBanner_platform(show);
+}

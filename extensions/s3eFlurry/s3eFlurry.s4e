@@ -58,6 +58,8 @@ typedef enum s3eFlurryUserGender
 
 
 functions:
+// -- Flurry Analytics --
+//=================================================================================================
 /**
  * Start a flurry session using your flurry application ID
  *
@@ -165,3 +167,33 @@ void s3eFlurrySetSessionReportOnClose(const s3eBool sendReportOnClose) run_on_os
  * s3eFlurry.h
  */
 void s3eFlurrySetSessionReportOnPause(const s3eBool sendReportOnPause) run_on_os_thread
+
+
+// -- Flurry App Circle -- // Implemented for Marmamalde 5.2 and above [May Change]
+//=================================================================================================
+/**
+ * Enable/Disable Flurry App Circle
+ * Should be done before s3eFlurryStart
+ * @see s3eFlurryStart
+ *
+ * @par Required Header Files
+ * s3eFlurry.h
+ */
+void s3eFlurryAppCircleEnable() run_on_os_thread
+
+/**
+ * Set the default message that will appear if no ad banner is displayed
+ *
+ * @par Required Header Files
+ * s3eFlurry.h
+ */
+void s3eFlurrySetDefaultText(const char* text) run_on_os_thread
+
+/**
+ * Show/Hide Flurry App Circle Banner Ads
+ * First call (true) shows banner, all subsequent calls update this banner
+ *
+ * @par Required Header Files
+ * s3eFlurry.h
+ */
+void s3eFlurryShowAdBanner(const s3eBool show) run_on_os_thread

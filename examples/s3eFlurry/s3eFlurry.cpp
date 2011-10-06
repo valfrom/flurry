@@ -61,29 +61,32 @@
 #include "ExamplesMain.h"
 #include "s3eOSReadString.h"
 #include "s3eFlurry.h"
-#include "s3eLocation.h" // for logging location
+//#include "s3eLocation.h" // for logging location
 
 #include <stdlib.h> // for atoi()
 
 /*
  * Device Location
  */
-static s3eLocation g_Location;
+//static s3eLocation g_Location;
 static s3eResult g_Error = S3E_RESULT_ERROR;
 
 /*
  * Buttons
  */
+// Flurry Analytics Buttons
 static Button* g_ButtonLogEvent = NULL;
 static Button* g_ButtonLogTimedEvent = NULL;
 static Button* g_ButtonEndTimedEvent = NULL;
 static Button* g_ButtonLogError = NULL;
-static Button* g_ButtonUserID = NULL;
-static Button* g_ButtonUserAge = NULL;
-static Button* g_ButtonUserGender = NULL;
+static Button* g_ButtonUserInfo = NULL;
 static Button* g_ButtonUserLocation = NULL;
 static Button* g_ButtonToggleSendOnClose = NULL;
 static Button* g_ButtonToggleSendOnPause = NULL;
+// Flurry AppCircle Buttons
+static Button* g_ButtonSetDefaultMessage = NULL;
+static Button* g_ButtonToggleAdBanner = NULL;
+
 
 /*
  * Name Constants
@@ -91,6 +94,7 @@ static Button* g_ButtonToggleSendOnPause = NULL;
 #define MAX_CHAR_SIZE 256
 bool bSendSessionReportOnClose = true;
 bool bSendSessionReportOnPause = true;
+bool bShowBanner = false;
 
 //Example Main
 void ExampleInit()
@@ -101,29 +105,34 @@ void ExampleInit()
     g_ButtonLogTimedEvent = NewButton("Log Timed Event");
 	g_ButtonEndTimedEvent = NewButton("End Timed Event");
 	g_ButtonLogError = NewButton("Log Error");
-	g_ButtonUserID = NewButton("Set User ID");
-	g_ButtonUserAge = NewButton("Set User Age");
-	g_ButtonUserGender = NewButton("Set User Gender");
+	g_ButtonUserInfo = NewButton("Set User Info");
 	g_ButtonUserLocation = NewButton("Log User Location");
 	g_ButtonToggleSendOnClose = NewButton("Disable send session report on close");
 	g_ButtonToggleSendOnPause = NewButton("Disable send session report on pause");
+
+	g_ButtonSetDefaultMessage = NewButton("Set Default Banner Message");
+	g_ButtonToggleAdBanner = NewButton("Toggle Ad Banner");
 
     g_ButtonLogEvent->m_Enabled = false;
     g_ButtonLogTimedEvent->m_Enabled = false;
 	g_ButtonEndTimedEvent->m_Enabled = false;
 	g_ButtonLogError->m_Enabled = false;
-	g_ButtonUserID->m_Enabled = false;
-	g_ButtonUserAge->m_Enabled = false;
-	g_ButtonUserGender->m_Enabled = false;
+	g_ButtonUserInfo->m_Enabled = false;
 	g_ButtonUserLocation->m_Enabled = false;
 	g_ButtonToggleSendOnClose->m_Enabled = false;
 	g_ButtonToggleSendOnPause->m_Enabled = false;
+
+	g_ButtonSetDefaultMessage->m_Enabled = false;
+	g_ButtonToggleAdBanner->m_Enabled = false;
 
     if (!s3eFlurryAvailable())
     {
         AppendMessageColour(RED,"Extension Not Available");
         return;
 	}
+
+	//Enable AppCircle
+	s3eFlurryAppCircleEnable();
 
 	//iOS Applicaton Key
 	if(s3eDeviceGetInt (S3E_DEVICE_OS) == S3E_OS_ID_IPHONE)
@@ -132,17 +141,19 @@ void ExampleInit()
 	else if(s3eDeviceGetInt (S3E_DEVICE_OS) == S3E_OS_ID_ANDROID)
 		s3eFlurryStart("HD4EZJ147ELQAT9H43KM");
 
+
     g_ButtonLogEvent->m_Enabled = true;
     g_ButtonLogTimedEvent->m_Enabled = true;
 	g_ButtonEndTimedEvent->m_Enabled = true;
 	g_ButtonLogError->m_Enabled = true;
-	g_ButtonUserID->m_Enabled = true;
-	g_ButtonUserAge->m_Enabled = true;
-	g_ButtonUserGender->m_Enabled = true;
+	g_ButtonUserInfo->m_Enabled = true;
 	g_ButtonUserLocation->m_Enabled = true;
 	g_ButtonToggleSendOnClose->m_Enabled = true;
 	g_ButtonToggleSendOnPause->m_Enabled = true;
-	
+
+	g_ButtonSetDefaultMessage->m_Enabled = true;
+	g_ButtonToggleAdBanner->m_Enabled = true;
+
     s3eLocationStart();
 }
 
@@ -199,31 +210,20 @@ bool ExampleUpdate()
         strcpy(Message, s3eOSReadStringUTF8("Error Message:", 0));
 		s3eFlurryLogError(Error, Message);
     }
-    else if (pressed == g_ButtonUserID)
+    else if (pressed == g_ButtonUserInfo)
     {
 		char userID[MAX_CHAR_SIZE];
-
         // User ID: Set an ID that can be used to recognise this user
         strcpy(userID, s3eOSReadStringUTF8("Enter User ID:", 0));
 		s3eFlurrySetUserID(userID);
 
-        AppendMessageColour(GREEN, "Logged User ID: %s", userID);
-    }
-    else if (pressed == g_ButtonUserAge)
-    {
 		char userAge[MAX_CHAR_SIZE];
-
         // User Age: Set the user's age
         strcpy(userAge, s3eOSReadStringUTF8("Enter User Age:", S3E_OSREADSTRING_FLAG_NUMBER));
         uint8 age = atoi(userAge);
 		s3eFlurrySetUserAge(age);
-		
-        AppendMessageColour(GREEN, "Logged User age: %i", age);
-    }
-    else if (pressed == g_ButtonUserGender)
-    {
-		char userGender[MAX_CHAR_SIZE];
 
+		char userGender[MAX_CHAR_SIZE];
         // User Gender: Set the user's gender
         strcpy(userGender, s3eOSReadStringUTF8("Enter User Gender\n\"M\" or \"F\"", 0));
 		if(!strcmp(userGender,"m") || !strcmp(userGender,"M"))
@@ -237,16 +237,19 @@ bool ExampleUpdate()
 			AppendMessageColour(GREEN, "Logged User Gender: Female");
 		}
 		else
-			AppendMessageColour(RED, "Gender not valid");
+			AppendMessageColour(RED, "Gender given not valid");
+
+        AppendMessageColour(GREEN, "Logged User age: %i", age);
+        AppendMessageColour(GREEN, "Logged User ID: %s", userID);
     }
     else if (pressed == g_ButtonUserLocation)
     {
-		g_Error = s3eLocationGet(&g_Location);
+		//g_Error = s3eLocationGet(&g_Location);
 		if(g_Error == S3E_RESULT_ERROR)
 			AppendMessageColour(RED, "Could not determine location");
 		else
 		{
-			s3eFlurrySetLocation(&g_Location);
+		//	s3eFlurrySetLocation(&g_Location);
 			AppendMessageColour(GREEN, "Logged user location");
 		}
 	}
@@ -279,6 +282,26 @@ bool ExampleUpdate()
 			AppendMessageColour(GREEN, "Session report send on pause: Disabled");
 			g_ButtonToggleSendOnPause->m_Name = (char*)"Enable send session report on pause";
 		}
+    }
+
+    else if (pressed == g_ButtonSetDefaultMessage)
+    {
+		char message[MAX_CHAR_SIZE];
+
+        // User Gender: Set the user's gender
+        strcpy(message, s3eOSReadStringUTF8("Enter a default message to be shown in the event no banner is available",0));
+		s3eFlurrySetDefaultText(message);
+	}
+    else if (pressed == g_ButtonToggleAdBanner)
+    {
+		bShowBanner = !bShowBanner;
+		s3eFlurryShowAdBanner(bShowBanner);
+
+		if(bShowBanner)
+			AppendMessageColour(GREEN, "Ad Banner: Enabled");
+		else
+			AppendMessageColour(GREEN, "Ad Banner: Disabled");
+
     }
     return true;
 }

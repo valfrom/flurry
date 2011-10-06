@@ -12,8 +12,8 @@
  */
 
 
-#ifndef S3EFLURRY_H_INTERNAL
-#define S3EFLURRY_H_INTERNAL
+#ifndef S3EFLURRY_INTERNAL_H
+#define S3EFLURRY_INTERNAL_H
 
 #include "s3eTypes.h"
 #include "s3eFlurry.h"
@@ -62,5 +62,11 @@ void s3eFlurrySetSessionReportOnClose_platform(const s3eBool sendReportOnClose);
 
 void s3eFlurrySetSessionReportOnPause_platform(const s3eBool sendReportOnPause);
 
+void s3eFlurryAppCircleEnable_platform();
 
-#endif /* !S3EFLURRY_H_INTERNAL */
+void s3eFlurrySetDefaultText_platform(const char* text);
+
+void s3eFlurryShowAdBanner_platform(const s3eBool show);
+
+
+#endif /* !S3EFLURRY_INTERNAL_H */
