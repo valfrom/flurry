@@ -104,7 +104,7 @@ class s3eFlurry
             {
                 appCircle.setDefaultNoAdsMessage(message);
 
-                final ViewGroup viewGroup = LoaderActivity.m_Activity.GetFrameLayout();
+                final ViewGroup viewGroup = LoaderActivity.m_Activity.m_FrameLayout;
                 m_PromoView = appCircle.getHook(LoaderActivity.m_Activity, "s3eAPPCIRCLE_BANNER_HOOK", com.flurry.android.Constants.MODE_LANDSCAPE);
 
                 if (viewGroup == null)
@@ -143,7 +143,7 @@ class s3eFlurry
         }
         else // Hide Banner
         {
-            final ViewGroup viewGroup = LoaderActivity.m_Activity.GetFrameLayout();
+            final ViewGroup viewGroup = LoaderActivity.m_Activity.m_FrameLayout;
             viewGroup.removeView(m_PromoView);
             Log.d("s3eFlurry", "////// View Removed //////");
             m_isBannerDisplayed = false;
