@@ -27,6 +27,7 @@ static jmethodID g_s3eFlurrySetSessionReportOnPause;
 static jmethodID g_s3eFlurryAppCircleEnable;
 static jmethodID g_s3eFlurrySetDefaultText;
 static jmethodID g_s3eFlurryShowAdBanner;
+static jmethodID g_s3eFlurryShowOfferWall;
 
 s3eResult s3eFlurryInit_platform()
 {
@@ -101,6 +102,10 @@ s3eResult s3eFlurryInit_platform()
 
     g_s3eFlurryShowAdBanner = env->GetMethodID(cls, "s3eFlurryShowAdBanner", "(Z)V");
     if (!g_s3eFlurryShowAdBanner)
+        goto fail;
+
+    g_s3eFlurryShowOfferWall = env->GetMethodID(cls, "s3eFlurryShowOfferWall", "()V");
+    if (!g_s3eFlurryShowOfferWall)
         goto fail;
 
 
@@ -220,4 +225,10 @@ void s3eFlurryShowAdBanner_platform(const s3eBool show)
 		env->CallVoidMethod(g_Obj, g_s3eFlurryShowAdBanner, true);
 	if(show == S3E_FALSE)
 		env->CallVoidMethod(g_Obj, g_s3eFlurryShowAdBanner, false);
+}
+
+void s3eFlurryShowOfferWall_platform()
+{
+    JNIEnv* env = s3eEdkJNIGetEnv();
+	env->CallVoidMethod(g_Obj, g_s3eFlurryShowOfferWall);
 }

@@ -24,6 +24,7 @@ typedef       void(*s3eFlurrySetSessionReportOnPause_t)(const s3eBool sendReport
 typedef       void(*s3eFlurryAppCircleEnable_t)();
 typedef       void(*s3eFlurrySetDefaultText_t)(const char* text);
 typedef       void(*s3eFlurryShowAdBanner_t)(const s3eBool show);
+typedef       void(*s3eFlurryShowOfferWall_t)();
 
 /**
  * struct that gets filled in by s3eFlurryRegister
@@ -43,6 +44,7 @@ typedef struct s3eFlurryFuncs
     s3eFlurryAppCircleEnable_t m_s3eFlurryAppCircleEnable;
     s3eFlurrySetDefaultText_t m_s3eFlurrySetDefaultText;
     s3eFlurryShowAdBanner_t m_s3eFlurryShowAdBanner;
+    s3eFlurryShowOfferWall_t m_s3eFlurryShowOfferWall;
 } s3eFlurryFuncs;
 
 static s3eFlurryFuncs g_Ext;
@@ -215,4 +217,14 @@ void s3eFlurryShowAdBanner(const s3eBool show)
         return;
 
     g_Ext.m_s3eFlurryShowAdBanner(show);
+}
+
+void s3eFlurryShowOfferWall()
+{
+    IwTrace(FLURRY_VERBOSE, ("calling s3eFlurry[13] func: s3eFlurryShowOfferWall"));
+
+    if (!_extLoad())
+        return;
+
+    g_Ext.m_s3eFlurryShowOfferWall();
 }

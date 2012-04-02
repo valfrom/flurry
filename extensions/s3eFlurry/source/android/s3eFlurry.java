@@ -149,4 +149,14 @@ class s3eFlurry
             m_isBannerDisplayed = false;
         }
     }
+    public void s3eFlurryShowOfferWall() {
+    	appCircle = FlurryAgent.getAppCircle();
+        if(appCircle != null) {
+        	final ViewGroup viewGroup = LoaderActivity.m_Activity.m_FrameLayout;
+        	//"APP_MAIN_HOOK" here just identifier
+        	appCircle.openCatalog(LoaderActivity.m_Activity, "APP_MAIN_HOOK");
+        } else {
+        	Log.d("S3EFLURRY", "App Circle is not enabled");
+        }
+    }
 }

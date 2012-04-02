@@ -159,3 +159,8 @@ void s3eFlurryShowAdBanner_platform(const s3eBool show)
 {
     // ToDo: Add Banner to display flurry ad
 }
+
+void s3eFlurryShowOfferWall_platform()
+{
+	// ToDo: Show offer wall
+}

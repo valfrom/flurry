@@ -87,3 +87,8 @@ void s3eFlurryShowAdBanner(const s3eBool show)
 {
 	s3eFlurryShowAdBanner_platform(show);
 }
+
+void s3eFlurryShowOfferWall()
+{
+	s3eFlurryShowOfferWall_platform();
+}

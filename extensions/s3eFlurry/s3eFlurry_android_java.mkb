@@ -8,7 +8,7 @@ files
     s3eFlurry.java
 }
 
-librarypath "$MARMALADE_ROOT/extensions/s3eFlurry/lib/android/libFlurry/FlurryAgent.jar"
+librarypath "lib/android/libFlurry/FlurryAgent.jar"
 librarypath "$MARMALADE_ROOT/s3e/deploy/plugins/android/android.jar"
 librarypath "$MARMALADE_ROOT/s3e/loader/android/s3e_release.jar"
 

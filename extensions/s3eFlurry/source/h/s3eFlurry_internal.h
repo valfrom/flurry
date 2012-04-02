@@ -68,5 +68,7 @@ void s3eFlurrySetDefaultText_platform(const char* text);
 
 void s3eFlurryShowAdBanner_platform(const s3eBool show);
 
+void s3eFlurryShowOfferWall_platform();
+
 
 #endif /* !S3EFLURRY_INTERNAL_H */

@@ -204,6 +204,14 @@ void s3eFlurrySetDefaultText(const char* text);
  */
 void s3eFlurryShowAdBanner(const s3eBool show);
 
+/**
+ * Show Flurry App Circle Offer catalog
+ *
+ * @par Required Header Files
+ * s3eFlurry.h
+ */
+void s3eFlurryShowOfferWall();
+
 S3E_END_C_DECL
 
 #endif /* !S3E_EXT_FLURRY_H */

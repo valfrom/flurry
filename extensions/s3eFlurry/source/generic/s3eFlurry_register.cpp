@@ -102,6 +102,12 @@ static void s3eFlurryShowAdBanner_wrap(const s3eBool show)
     s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eFlurryShowAdBanner, 1, show);
 }
 
+static void s3eFlurryShowOfferWall_wrap()
+{
+    IwTrace(FLURRY_VERBOSE, ("calling s3eFlurry func on main thread: s3eFlurryShowOfferWall"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eFlurryShowOfferWall, 0);
+}
+
 #define s3eFlurryStart s3eFlurryStart_wrap
 #define s3eFlurryLogEvent s3eFlurryLogEvent_wrap
 #define s3eFlurryEndTimedEvent s3eFlurryEndTimedEvent_wrap
@@ -115,13 +121,14 @@ static void s3eFlurryShowAdBanner_wrap(const s3eBool show)
 #define s3eFlurryAppCircleEnable s3eFlurryAppCircleEnable_wrap
 #define s3eFlurrySetDefaultText s3eFlurrySetDefaultText_wrap
 #define s3eFlurryShowAdBanner s3eFlurryShowAdBanner_wrap
+#define s3eFlurryShowOfferWall s3eFlurryShowOfferWall_wrap
 
 #endif
 
 void s3eFlurryRegisterExt()
 {
     /* fill in the function pointer struct for this extension */
-    void* funcPtrs[13];
+    void* funcPtrs[14];
     funcPtrs[0] = (void*)s3eFlurryStart;
     funcPtrs[1] = (void*)s3eFlurryLogEvent;
     funcPtrs[2] = (void*)s3eFlurryEndTimedEvent;
@@ -135,11 +142,12 @@ void s3eFlurryRegisterExt()
     funcPtrs[10] = (void*)s3eFlurryAppCircleEnable;
     funcPtrs[11] = (void*)s3eFlurrySetDefaultText;
     funcPtrs[12] = (void*)s3eFlurryShowAdBanner;
+    funcPtrs[13] = (void*)s3eFlurryShowOfferWall;
 
     /*
      * Flags that specify the extension's use of locking and stackswitching
      */
-    int flags[13] = { 0 };
+    int flags[14] = { 0 };
 
     /*
      * Register the extension
