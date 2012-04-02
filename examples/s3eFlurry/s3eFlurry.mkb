@@ -1,4 +1,10 @@
 #!/usr/bin/env mkb
+options {
+    module_path="../"
+    module_path="../../extensions"
+}
+
+
 files
 {
     s3eFlurry.cpp
