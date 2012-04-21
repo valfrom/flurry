@@ -46,4 +46,5 @@ deployments
     android-external-jars=lib/android/libFlurry/FlurryAgent.jar
     android-external-jars=lib/android/s3eFlurry.jar
     android-so=lib/android/libs3eFlurry.so
+    android-extra-application-manifest='android/AndroidAppManifest.xml'
 }

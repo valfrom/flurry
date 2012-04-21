@@ -1,0 +1,7 @@
+<activity android:name="com.flurry.android.CatalogActivity"
+      android:theme="@android:style/Theme.Translucent">
+   <intent-filter>
+        	<action android:name="my.unique.intent.name"/>
+        	<category android:name="android.intent.category.DEFAULT"/>
+   </intent-filter>
+</activity
