@@ -411,7 +411,7 @@ LOAD /Developer/android-ndk-r5/toolchains/arm-linux-androideabi-4.4.3/prebuilt/d
 /DISCARD/
  *(.note.GNU-stack)
  *(.gnu_debuglink)
-OUTPUT(/Users/valeriiivanov/Documents/workspace/KeiTaiToys/MKTT/s3eFlurry/lib/android/libs3eFlurry.so elf32-littlearm)
+OUTPUT(/Users/valeriiivanov/Documents/workspace/KeiTaiToys/MKTT/flurry/extensions/s3eFlurry/lib/android/libs3eFlurry.so elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x2a

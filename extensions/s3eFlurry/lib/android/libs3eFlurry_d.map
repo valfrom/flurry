@@ -589,11 +589,11 @@ LOAD /Developer/android-ndk-r5/toolchains/arm-linux-androideabi-4.4.3/prebuilt/d
  .debug_abbrev  0x00000282       0xfa debug/s3eFlurry.os
  .debug_abbrev  0x0000037c      0x12b debug/s3eFlurry_register.os
 
-.debug_line     0x00000000      0x5d8
+.debug_line     0x00000000      0x60e
  *(.debug_line)
- .debug_line    0x00000000      0x34e debug/s3eFlurry_platform.os
- .debug_line    0x0000034e      0x110 debug/s3eFlurry.os
- .debug_line    0x0000045e      0x17a debug/s3eFlurry_register.os
+ .debug_line    0x00000000      0x360 debug/s3eFlurry_platform.os
+ .debug_line    0x00000360      0x122 debug/s3eFlurry.os
+ .debug_line    0x00000482      0x18c debug/s3eFlurry_register.os
 
 .debug_frame    0x00000000      0x6fc
  *(.debug_frame)
@@ -601,14 +601,14 @@ LOAD /Developer/android-ndk-r5/toolchains/arm-linux-androideabi-4.4.3/prebuilt/d
  .debug_frame   0x0000035c      0x1d0 debug/s3eFlurry.os
  .debug_frame   0x0000052c      0x1d0 debug/s3eFlurry_register.os
 
-.debug_str      0x00000000     0x50f1
+.debug_str      0x00000000     0x5139
  *(.debug_str)
- .debug_str     0x00000000     0x4e1b debug/s3eFlurry_platform.os
-                               0x4fbe (size before relaxing)
- .debug_str     0x00004e1b       0xac debug/s3eFlurry.os
-                                0x44b (size before relaxing)
- .debug_str     0x00004ec7      0x22a debug/s3eFlurry_register.os
-                                0x473 (size before relaxing)
+ .debug_str     0x00000000     0x4e3f debug/s3eFlurry_platform.os
+                               0x4fe2 (size before relaxing)
+ .debug_str     0x00004e3f       0xbe debug/s3eFlurry.os
+                                0x46f (size before relaxing)
+ .debug_str     0x00004efd      0x23c debug/s3eFlurry_register.os
+                                0x497 (size before relaxing)
 
 .debug_loc      0x00000000      0xa41
  *(.debug_loc)
@@ -647,7 +647,7 @@ LOAD /Developer/android-ndk-r5/toolchains/arm-linux-androideabi-4.4.3/prebuilt/d
 /DISCARD/
  *(.note.GNU-stack)
  *(.gnu_debuglink)
-OUTPUT(/Users/valeriiivanov/Documents/workspace/KeiTaiToys/MKTT/s3eFlurry/lib/android/libs3eFlurry_d.so elf32-littlearm)
+OUTPUT(/Users/valeriiivanov/Documents/workspace/KeiTaiToys/MKTT/flurry/extensions/s3eFlurry/lib/android/libs3eFlurry_d.so elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x2a

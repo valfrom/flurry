@@ -86,6 +86,7 @@ class s3eFlurry
     // Flurry App Circle
     public void s3eFlurryAppCircleEnable()
     {
+	FlurryAgent.setCatalogIntentName("flurry.catalog.unique.intent.name");
         FlurryAgent.enableAppCircle();
         Log.d("s3eFlurry", "////// App Circle Enabled //////");
     }
