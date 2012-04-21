@@ -4,4 +4,4 @@
         	<action android:name="my.unique.intent.name"/>
         	<category android:name="android.intent.category.DEFAULT"/>
    </intent-filter>
-</activity
+</activity>
